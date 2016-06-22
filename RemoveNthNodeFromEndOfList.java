@@ -10,7 +10,7 @@
   * corner cases:
   * 1. remove the head element(maybe requires a dummy node)
   * 2. null listnode
-  * /
+  */
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         int t = n;
