@@ -3,7 +3,7 @@ public class Solution {
     char pre = s.charAt(0);
     int count = 1;
     int len = s.length();
-    StringBuffer sb = new StringBuffer();
+    StringBuffer sb = new StringBuffer(); // use StringBuffer because String can't append integer and char at the same time
     int i = 1;
     while (i < len) {
       if (pre == s.charAt(i)) {
@@ -16,7 +16,7 @@ public class Solution {
       i++;
     }
     sb.append(count).append(pre);//len == 1 and the last one digit to be append over here
-    return sb.toString();
+    return sb.toString();// remember to convert StringBuffer to String type
   }
   
   public String countAndSay(int n) {
