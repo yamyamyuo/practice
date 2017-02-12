@@ -12,7 +12,7 @@ public static int findKthSmallest(int[] a, int m, int begin1, int[] b, int n, in
 		return Integer.min(a[begin1], b[begin2]);
 	//解决此题的方法可以依照：寻找一个unioned sorted array中的第k大（从1开始数）的数。因而等价于寻找并判断两个sorted array中第k/2（从1开始数）大的数。
 	// 如果以上的条件都不符合，则继续进行二分查找, k/2, 因为m 肯定小于n，所以 min(k/2, m)
-	// 为什么partB不会让b[]越界
+	// 为什么partB不会让b[]越界, 因为k本来输入就是m+n, partB = k - min(k/2, m); 不管怎样都不会越界
 	int partA = Integer.min(k / 2, m), partB = k - partA;
 	if (a[begin1 + partA - 1] == b[begin2 + partB - 1])
 		return a[begin1 + partA - 1];
