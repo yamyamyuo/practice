@@ -1,4 +1,5 @@
 // the tricky thing of this problem: there are duplicate
+// use one for loop and two pointer to avoid o(n^3)
 public class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
@@ -35,6 +36,7 @@ public class Solution {
                     back--;
                     
                     // processing duplicate of number 2
+		    // 因为front 已经移动了一位，所以需要nums[front-1]
                     while (front < back && nums[front] == nums[front-1])
                         front++;
                     
@@ -42,11 +44,7 @@ public class Solution {
                     while (front < back && nums[back] == nums[back+1])
                     back--;
                 }
-                
-        
             }
-            
-            
         }
         return result;
     }
