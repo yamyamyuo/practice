@@ -1,5 +1,8 @@
 // the tricky thing of this problem: there are duplicate
 // use one for loop and two pointer to avoid o(n^3)
+// 1. remove duplicate: sort
+// 2. 2 pointer
+
 public class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
