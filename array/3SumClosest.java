@@ -10,7 +10,7 @@ public class Solution {
       int q = nums.length - 1;
       while(p<q) {
         int sum = nums[i] + nums[p] + nums[q];
-        
+
         if (sum == target) {
           return target;
         }
@@ -26,5 +26,6 @@ public class Solution {
 
       }
     }
+    return res;
   }
 }
