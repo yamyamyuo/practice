@@ -8,6 +8,7 @@ public class Solution {
         if(nums.length < 1) return -1;
 
         int l = 0, r = nums.length - 1;
+	// l<=r or l<r depends on the corner cases, for example the [0], [0,1] cases
         while (l < r) {
             int m = l + (r - l)/2;
             // the left part is in sorted order
