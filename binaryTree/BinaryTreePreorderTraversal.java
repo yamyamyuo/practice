@@ -28,3 +28,21 @@ public class Solution {
         return path;
     }
 }
+
+//递归
+public class Solution {
+    public void dfs(TreeNode root, List<Integer> res) {
+        if (root == null)
+            return ;
+        res.add(root.val);
+        dfs(root.left,res);
+        dfs(root.right,res);
+    }
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        dfs(root, res);
+        return res;
+
+    }
+}
