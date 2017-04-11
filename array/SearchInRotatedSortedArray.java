@@ -8,7 +8,7 @@ public class Solution {
         if(nums.length < 1) return -1;
 
         int l = 0, r = nums.length - 1;
-	// l<=r or l<r depends on the corner cases, for example the [0], [0,1] cases
+	      // l<=r or l<r depends on the corner cases, for example the [0], [0,1] cases
         while (l < r) {
             int m = l + (r - l)/2;
             // the left part is in sorted order
@@ -17,8 +17,8 @@ public class Solution {
             // 如果右边那段是sorted，则搜target是够在右边
             // 保证搜索target的那一段是顺序的即可
             // 然后一直二分地查找顺序的一段数组
-	    if (nums[m] >= nums[l]) {
-	    // it should be greater and equal, test case failed: [3,1], target = 1;
+      	    if (nums[m] >= nums[l]) {
+      	    // it should be greater and equal, test case failed: [3,1], target = 1;
                 if (nums[l] <= target && target < nums[m]) r = m-1;
                 else l = m+1;
             } else {
